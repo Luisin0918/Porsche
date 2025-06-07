@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agencia Porsche</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="img/logo2.png" alt="Porsche Logo" />
+    </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="modelos.html">Modelos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+
+  <section class="slider">
+  <div class="slides">
+    <div class="slide active" style="background-image: url('img/1.webp');">
+      <div class="slide-text">
+        <h2>Potencia sin límites</h2>
+        <p>Descubre el nuevo Porsche Taycan</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('img/2.jpg');">
+      <div class="slide-text">
+        <h2>Diseño Único y Elegante</h2>
+        <p>Elegancia, rendimiento y tecnología Nuevo Porsche GTS</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('img/4.jpg');">
+      <div class="slide-text">
+        <h2>Diseño atemporal</h2>
+        <p>Diseñado para la pista. Nacido para dominar Nuevo Porsche GT3</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('img/2.webp');">
+      <div class="slide-text">
+        <h2>El poder hecho arte Porsche 911 Turbo S</h2>
+        <p>Visítanos y vive la experiencia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+  // Menú hamburguesa
+  const toggle2 = document.getElementById('menu-toggle');
+  const nav2 = document.querySelector('.nav');
+
+  toggle2.addEventListener('click', () => {
+    nav2.classList.toggle('active');
+    toggle2.classList.toggle('open');
+  });
+
+  // Slider automático
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 5000);
+</script>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="img/logo2.png" alt="Porsche logo" />
+      <p>&copy; 2025 Porsche Agencia Oficial</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="modelos.html">Modelos</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <p>Email: contacto@porsche.com</p>
+      <p>Tel: +52 555 123 4567</p>
+      <div class="redes">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

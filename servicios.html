@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agencia Porsche</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="img/logo2.png" alt="Porsche Logo" />
+    </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="modelos.html">Modelos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+
+  <section class="slider">
+  <div class="slides">
+    <div class="slide active" style="background-image: url('img/1.webp');">
+      <div class="slide-text">
+        <h2>Potencia sin límites</h2>
+        <p>Descubre el nuevo Porsche Taycan</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('img/2.jpg');">
+      <div class="slide-text">
+        <h2>Diseño Único y Elegante</h2>
+        <p>Elegancia, rendimiento y tecnología Nuevo Porsche GTS</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('img/4.jpg');">
+      <div class="slide-text">
+        <h2>Diseño atemporal</h2>
+        <p>Diseñado para la pista. Nacido para dominar Nuevo Porsche GT3</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('img/2.webp');">
+      <div class="slide-text">
+        <h2>El poder hecho arte Porsche 911 Turbo S</h2>
+        <p>Visítanos y vive la experiencia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="porsche-servicios">
+  <h2>Experimenta la Excelencia de Porsche con Nosotros</h2>
+  <p>¿Eres dueño de un Porsche o estás a punto de serlo? En nuestra agencia, entendemos la pasión y la precisión que representa cada vehículo Porsche. Por eso, nos dedicamos a ofrecerte una gama de servicios especializados, diseñados para mantener tu automóvil en su máximo rendimiento y preservar su valor a lo largo del tiempo.</p>
+
+  <h3>Nuestros Servicios de Porsche</h3>
+
+  <ul>
+    <li><strong>Mantenimiento Especializado:</strong> Desde revisiones de rutina hasta mantenimientos mayores, nuestro equipo de técnicos certificados utiliza diagnósticos avanzados y piezas originales Porsche para asegurar que tu vehículo reciba el cuidado exacto que necesita.</li>
+    
+    <li><strong>Reparaciones de Alta Precisión:</strong> Ya sea una reparación mecánica compleja o de carrocería, contamos con la experiencia y las herramientas específicas de fábrica para devolverle a tu Porsche su estado original, garantizando la seguridad y el desempeño.</li>
+    
+    <li><strong>Detallado y Protección Premium:</strong> Tu Porsche no solo debe funcionar a la perfección, sino también lucir impecable. Ofrecemos servicios de detallado interior y exterior, corrección de pintura y aplicación de recubrimientos cerámicos de última generación para proteger su brillo y estética.</li>
+    
+    <li><strong>Personalización y Accesorios Originales:</strong> Si deseas realzar aún más la exclusividad de tu Porsche, te ofrecemos acceso a un catálogo completo de accesorios originales Porsche Tequipment y Porsche Exclusive Manufaktur. Desde mejoras de rendimiento hasta detalles estéticos, todo con la garantía de calidad de la marca.</li>
+    
+    <li><strong>Asesoramiento y Gestión Integral:</strong> Más allá del servicio técnico, te brindamos un asesoramiento personalizado sobre el cuidado de tu Porsche, su historial de mantenimiento y las mejores prácticas para conservar su valor. También podemos ayudarte con la gestión de garantías y seguros.</li>
+  </ul>
+
+  <p>En nuestra agencia, tu Porsche está en las mejores manos. Confía en nosotros para cuidar de tu inversión y permitirte seguir disfrutando de la inigualable experiencia de conducir un Porsche.</p>
+
+  <p><strong>¿Listo para brindarle a tu Porsche el servicio que se merece?</strong> Contáctanos hoy mismo para agendar tu cita o conocer más sobre cómo podemos ayudarte.</p>
+</section>
+
+
+
+<script>
+  // Menú hamburguesa
+  const toggle2 = document.getElementById('menu-toggle');
+  const nav2 = document.querySelector('.nav');
+
+  toggle2.addEventListener('click', () => {
+    nav2.classList.toggle('active');
+    toggle2.classList.toggle('open');
+  });
+
+  // Slider automático
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 5000);
+</script>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="img/logo2.png" alt="Porsche logo" />
+      <p>&copy; 2025 Porsche Agencia Oficial</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="modelos.html">Modelos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <p>Email: contacto@porsche.com</p>
+      <p>Tel: +52 555 123 4567</p>
+      <div class="redes">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
